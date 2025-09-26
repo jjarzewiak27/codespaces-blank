@@ -360,6 +360,19 @@ p a {
 
 /*
   ========================================
+  Travel
+  ========================================
+*/
+.travel img-side-by-side {
+  display: inline-block;
+  width: 45%;       /* adjust as needed */
+  margin: 5px;      /* small spacing */
+  vertical-align: top; /* keeps images aligned at the top */
+}
+
+
+/*
+  ========================================
   Venue
   ========================================
 */
