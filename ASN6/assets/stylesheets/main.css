@@ -374,12 +374,12 @@ p a {
   height: auto;               /* keep aspect ratio */
   object-fit: cover;          /* crop if necessary to keep them even */
 }
-/*.img-side-by-side {
+.img-side-by-side {
   display: inline-block;
   width: 45%;       /* adjust as needed */
   margin: 5px;      /* small spacing */
   vertical-align: top; /* keeps images aligned at the top */
-}*/
+}
 
 
 /*
