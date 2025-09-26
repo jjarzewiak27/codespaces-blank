@@ -363,12 +363,23 @@ p a {
   Travel
   ========================================
 */
-.img-side-by-side {
+.image-container {
+  display: flex;              /* places images side by side */
+  justify-content: space-between; /* spreads them across the page */
+  width: 100%;                /* full width of page */
+}
+
+.image-container img {
+  width: 50%;                 /* each image takes half the page */
+  height: auto;               /* keep aspect ratio */
+  object-fit: cover;          /* crop if necessary to keep them even */
+}
+/*.img-side-by-side {
   display: inline-block;
   width: 45%;       /* adjust as needed */
   margin: 5px;      /* small spacing */
   vertical-align: top; /* keeps images aligned at the top */
-}
+}*/
 
 
 /*
