@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register • John Jarzewiak</title>
+  <link rel="stylesheet" href="assets/stylesheets/register.css">
+</head>
+<body>
+    <header>
+    <h1>Register</h1>
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="about.html" >About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="register.html" aria-current="page">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Register for the Midterm Event</h2>
+
+    <form action="https://formspree.io/f/myzkjveq" method="POST">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color"><br><br>
+
+        <label for="resume">Upload File:</label>
+        <input type="file" id="resume" name="resume"><br><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <p>Choose your program:</p>
+        <input type="radio" id="webdev" name="program" value="Web Development">
+        <label for="webdev">Web Development</label><br>
+        <input type="radio" id="design" name="program" value="Design">
+        <label for="design">Design</label><br>
+        <input type="radio" id="security" name="program" value="Cybersecurity">
+        <label for="security">Cybersecurity</label><br><br>
+
+        <label for="experience">Rate your experience (0–10):</label>
+        <input type="range" id="experience" name="experience" min="0" max="10"><br><br>
+
+        <label for="topics">Topics of Interest:</label><br>
+        <select id="topics" name="topics">
+          <option value="html">HTML & CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="security">Security</option>
+        </select><br><br>
+
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+        <label for="newsletter">Subscribe to our newsletter</label><br><br>
+
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Write something..."></textarea><br><br>
+      </fieldset>
+
+      <input type="reset" value="Reset Form">
+      <input type="submit" value="Submit Registration">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; John Jarzewiak</p>
+  </footer>
+</body>
+</html>

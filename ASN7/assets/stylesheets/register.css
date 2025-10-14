@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic page layout */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f2f6fc;
+  color: #333;
+  line-height: 1.6;
+  padding: 0;
+}
+
+header {
+  background-color: #07131a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+/* Navigation bar */
+nav ul {
+  list-style: none;
+  background-color: #1a394a;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #1a394a;
+}
+
+/* Main form section */
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1a394a;
+}
+
+/* Fieldset and legend styling */
+fieldset {
+  border: 2px solid #1a394a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+legend {
+  font-weight: bold;
+  color: #1a394a;
+  padding: 0 10px;
+}
+
+/* Form labels and inputs */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Radio buttons, checkboxes, color, and range inputs */
+input[type="radio"],
+input[type="checkbox"],
+input[type="color"],
+input[type="range"] {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+  background-color: #07131a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #1a394a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #07131a;
+  color: white;
+  margin-top: 40px;
+}
