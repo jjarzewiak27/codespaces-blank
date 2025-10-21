@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASN8 — Form</title>
+<link rel="stylesheet" href="assets/stylesheets/styles.css">
+</head>
+<body>
+<div class="grid-container">
+<header class="site-header">
+<h1>Assignment 8 — Form Page</h1>
+</header>
+
+
+<nav class="site-nav" aria-label="Main navigation">
+<ul>
+<li><a href="https://www.columbusstate.edu" tabindex="1">Columbus State University</a></li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/" tabindex="2">Web Accessibility Standards (WAI)</a></li>
+<li><a href="https://web.dev/responsive-web-design-basics/" tabindex="3">Responsive Design Checker / Resources</a></li>
+</ul>
+</nav>
+
+
+<main class="site-main">
+<form id="frm1" action="#" method="get" aria-label="Simple example form">
+<label for="fname">First name:</label><br>
+<input type="text" id="fname" name="fname" value="John" tabindex="4"><br>
+
+
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname" value="Doe" tabindex="5"><br><br>
+
+
+<input type="submit" value="Submit" tabindex="6">
+</form>
+</main>
+
+
+<aside class="site-aside" aria-labelledby="logo-heading">
+<h2 id="logo-heading" class="visually-hidden">Logo</h2>
+
+
+<!-- Reuse the inline SVG logo for consistency -->
+<svg role="img" aria-labelledby="svgTitle2 svgDesc2" width="160" height="160" viewBox="0 0 200 200" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<title id="svgTitle2">Pixels the Cat — Logo</title>
+<desc id="svgDesc2">A simple cat-style logo used as an example.</desc>
+<circle cx="100" cy="100" r="80" fill="#f3c677" stroke="#333" stroke-width="3" />
+<circle cx="70" cy="85" r="10" fill="#333" />
+<circle cx="130" cy="85" r="10" fill="#333" />
+<path d="M70 130 Q100 150 130 130" stroke="#333" stroke-width="4" fill="none" stroke-linecap="round" />
+</svg>
+
+
+</aside>
+
+
+<footer class="site-footer">
+<p>John Jarzewiak — Fall 2025</p>
+</footer>
+</div>
+</body>
+</html>
