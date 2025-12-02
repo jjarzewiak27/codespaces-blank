@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Safety for Seniors – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simple cybersecurity tips to help seniors and other vulnerable users stay safe from phishing and scams.">
+  <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <!-- This could be a simple text logo or an image with alt text -->
+      <img src="images/security.jpg" alt="Shield icon for cyber safety" class="logo">
+      <h1>Cyber Safety for Seniors</h1>
+      <p class="tagline">Learn to spot scams before they spot you.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="phishing.html">Phishing Scams</a></li>
+      <li><a href="protect.html">Protect Yourself</a></li>
+      <li><a href="quiz.html">Quiz & Help</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero / intro section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h2 id="hero-heading">Stay Safe Online, One Click at a Time</h2>
+        <p>
+          This site is here to help you recognize <strong>phishing emails</strong>,
+          <strong>phone scams</strong>, and other tricks criminals use to steal money and
+          personal information.
+        </p>
+        <button type="button" id="plain-language-toggle">
+          Make this page easier to read
+        </button>
+        <p id="plain-language-text" class="hidden" aria-live="polite">
+          Scammers try to trick you into clicking links, opening attachments, or
+          giving them your information. We will show you what their tricks look
+          like and how to say “no.”
+        </p>
+      </div>
+
+      <!-- Slideshow / carousel (requirement: 5 images) -->
+      <div class="slideshow" aria-label="Examples of cyber scams">
+        <img id="slideshow-image"
+             src="images/slide1-email-warning.png"
+             alt="Example of a suspicious email asking for urgent payment">
+        <p id="slideshow-caption">
+          Example 1: An email that says “urgent payment needed” with spelling mistakes.
+        </p>
+        <div class="slideshow-controls">
+          <button type="button" id="prev-slide">Previous</button>
+          <button type="button" id="next-slide">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cybersecurity educational section -->
+    <section aria-labelledby="phishing-basics">
+      <h2 id="phishing-basics">What Is Phishing?</h2>
+      <p>
+        <strong>Phishing</strong> is when someone pretends to be a trusted person or
+        company (like your bank or Social Security) to trick you into giving away
+        personal information, clicking a bad link, or sending money.
+      </p>
+      <ul>
+        <li>Emails that say “Your account will be closed in 24 hours.”</li>
+        <li>Texts with links that say “Package delivery problem – click here.”</li>
+        <li>Phone calls claiming to be the IRS or tech support asking for payment.</li>
+      </ul>
+      <p>
+        Real companies <strong>do not</strong> ask you for your password, full Social
+        Security number, or credit card by email or text.
+      </p>
+    </section>
+
+    <!-- Interactive "spot the scam" example -->
+    <section aria-labelledby="spot-the-scam">
+      <h2 id="spot-the-scam">Can You Spot the Scam?</h2>
+      <p>
+        Read the short message below. Then click the button to reveal the
+        <strong>red flags</strong>.
+      </p>
+
+      <article class="fake-email" aria-label="Sample email text">
+        <p><strong>From:</strong> secure-banking@myb4nk-support.com</p>
+        <p><strong>Subject:</strong> URGENT: Account Locked!!!</p>
+        <p>
+          Dear Customer, your account has been locked for unusual activity.
+          Please <a href="#">click here</a> immediately and re-enter your password
+          and Social Security number to restore full access. Failure to act will
+          result in permanent account closure.
+        </p>
+      </article>
+
+      <button type="button" id="show-red-flags">
+        Show red flags in this message
+      </button>
+
+      <ul id="red-flags-list" class="hidden">
+        <li>Strange email address: “myb4nk-support.com” is not your real bank.</li>
+        <li>Lots of urgency: “URGENT!!!” and “permanent account closure.”</li>
+        <li>Asking for Social Security number and password – real banks don’t do this.</li>
+        <li>Suspicious link: we don’t know where “click here” really goes.</li>
+      </ul>
+    </section>
+
+    <!-- Simple call-to-action form area (full form on quiz.html) -->
+    <section aria-labelledby="get-help">
+      <h2 id="get-help">Need Help with a Suspicious Message?</h2>
+      <p>
+        If you ever get a message that worries you, do <strong>not</strong> click
+        on any links. Instead:
+      </p>
+      <ol>
+        <li>Call the company using a phone number you already trust.</li>
+        <li>Ask a family member or friend to look at the message with you.</li>
+        <li>Use our <a href="quiz.html">“Check Your Cyber Smarts”</a> page to learn more.</li>
+      </ol>
+    </section>
+  </main>
+
+  <aside aria-label="Quick Cybersecurity Tips">
+    <h2>Quick Tips</h2>
+    <ul>
+      <li>If it feels rushed or scary, pause and double-check.</li>
+      <li>Never give personal info over email or text.</li>
+      <li>Type web addresses yourself instead of clicking links.</li>
+      <li>Use strong passwords and turn on 2-step verification when possible.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Cyber Safety for Seniors. Educational use only.</p>
+    <a href="#main-content">Back to top</a>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>

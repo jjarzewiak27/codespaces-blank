@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Safety for Seniors – Quiz & Help</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cybersecurity quiz and help form for seniors to practice spotting phishing, vishing, and other scams.">
+  <link rel="stylesheet" href="stylesheets/main.css">
+
+  <!-- Extra styles just for this page -->
+  <style>
+    .form-section {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.08);
+    }
+
+    .form-row {
+      margin-bottom: 1rem;
+    }
+
+    .form-row label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+
+    .form-row small {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+    }
+
+    .error-message {
+      color: #b00020;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .error-field {
+      border: 2px solid #b00020 !important;
+    }
+
+    #form-messages {
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    #form-messages.success {
+      color: #0b6623;
+    }
+
+    #form-messages.error {
+      color: #b00020;
+    }
+
+    #submitted-results {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
+
+    #submitted-results h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <img src="images/security.jpg" alt="Shield icon for cyber safety" class="logo">
+      <div>
+        <h1>Cyber Safety for Seniors</h1>
+        <p class="tagline">Quiz & Help – Check your cyber smarts.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="phishing.html">Phishing Scams</a></li>
+      <li><a href="protect.html">Protect Yourself</a></li>
+      <li><a href="quiz.html" aria-current="page">Quiz &amp; Help</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="form-section" aria-labelledby="quiz-heading">
+      <h2 id="quiz-heading">Check Your Cyber Smarts</h2>
+      <p>
+        Answer these questions about <strong>phishing</strong>, <strong>phone scams</strong>, and
+        <strong>safe passwords</strong>. Then tell us what kind of messages you’d like help with.
+      </p>
+
+      <!-- Messages for validation feedback -->
+      <div id="form-messages" aria-live="polite"></div>
+
+      <form id="cyber-quiz-form" novalidate>
+        <!-- 1. Name -->
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <small>We’ll use this to personalize tips. First name is fine.</small>
+          <div class="error-message" id="name-error" aria-live="polite"></div>
+        </div>
+
+        <!-- 2. Email -->
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <small>So we can send you a simple checklist (no spam, promise).</small>
+          <div class="error-message" id="email-error" aria-live="polite"></div>
+        </div>
+
+        <!-- 3. Experience level (select) -->
+        <div class="form-row">
+          <label for="experience">How comfortable are you using the internet?</label>
+          <select id="experience" name="experience" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="Beginner">Beginner – I need step-by-step help.</option>
+            <option value="Average">Average – I use email and basic websites.</option>
+            <option value="Comfortable">Comfortable – I use many sites and apps.</option>
+            <option value="Expert">Expert – I teach others about computers.</option>
+          </select>
+          <div class="error-message" id="experience-error" aria-live="polite"></div>
+        </div>
+
+        <!-- 4. Quiz question: suspicious link (radio) -->
+        <fieldset class="form-row">
+          <legend>
+            If you get a text message from an unknown number that says
+            “Your package is delayed – <strong>tap here to track</strong>” with a strange link,
+            what should you do?
+          </legend>
+          <div>
+            <label>
+              <input type="radio" name="package-text" value="tap-link">
+              Tap the link to see if it is really your package.
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="package-text" value="delete-text">
+              Delete the text and, if you are worried, go to the delivery company’s website yourself.
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="package-text" value="reply-info">
+              Reply to the text with your name and address to confirm the package.
+            </label>
+          </div>
+          <div class="error-message" id="package-text-error" aria-live="polite"></div>
+        </fieldset>
+
+        <!-- 5. Quiz question: password safety (radio) -->
+        <fieldset class="form-row">
+          <legend>Which password is the safest?</legend>
+          <div>
+            <label>
+              <input type="radio" name="password-safety" value="john1965">
+              john1965
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="password-safety" value="Fluffy123">
+              Fluffy123
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="password-safety" value="Sunny-garden! chair 47">
+              Sunny-garden! chair 47
+            </label>
+          </div>
+          <small>Long passphrases with words, numbers, and symbols are harder to guess.</small>
+          <div class="error-message" id="password-safety-error" aria-live="polite"></div>
+        </fieldset>
+
+        <!-- 6. How often do you see suspicious messages? (select) -->
+        <div class="form-row">
+          <label for="frequency">How often do you get emails, texts, or calls that feel suspicious?</label>
+          <select id="frequency" name="frequency" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="Rarely">Rarely (once a month or less)</option>
+            <option value="Sometimes">Sometimes (1–2 times a week)</option>
+            <option value="Often">Often (several times a week)</option>
+            <option value="Daily">Every day</option>
+          </select>
+          <div class="error-message" id="frequency-error" aria-live="polite"></div>
+        </div>
+
+        <!-- 7. What worries you most? (checkboxes) -->
+        <fieldset class="form-row">
+          <legend>What worries you most online? (Choose all that apply.)</legend>
+          <div>
+            <label>
+              <input type="checkbox" name="worries" value="Money scams">
+              Losing money to a scam
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" name="worries" value="Identity theft">
+              Identity theft (someone pretending to be me)
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" name="worries" value="Computer viruses">
+              Computer viruses or strange pop-up messages
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="checkbox" name="worries" value="Account hacks">
+              Someone getting into my email or bank account
+            </label>
+          </div>
+          <div class="error-message" id="worries-error" aria-live="polite"></div>
+        </fieldset>
+
+        <!-- 8. Open question (textarea) -->
+        <div class="form-row">
+          <label for="help-text">
+            Describe a suspicious email, text, or phone call you’ve received
+            (or one you are worried about). We’ll highlight the red flags.
+          </label>
+          <textarea id="help-text" name="help-text" rows="4" required></textarea>
+          <div class="error-message" id="help-text-error" aria-live="polite"></div>
+        </div>
+
+        <!-- 9. Confirmation checkbox -->
+        <div class="form-row">
+          <label>
+            <input type="checkbox" id="confirm-safe" name="confirm-safe" required>
+            I understand I should never share my password, full Social Security number,
+            or bank details by email or text.
+          </label>
+          <div class="error-message" id="confirm-safe-error" aria-live="polite"></div>
+        </div>
+
+        <!-- Submit / reset -->
+        <div class="form-row">
+          <button type="submit">Submit Quiz &amp; Get Tips</button>
+          <button type="reset">Reset Form</button>
+        </div>
+      </form>
+
+      <!-- Where we show the user's answers using JavaScript -->
+      <div id="submitted-results" class="hidden" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <aside aria-label="Quick Cybersecurity Tips">
+    <h2>Quick Tips While You Take the Quiz</h2>
+    <ul>
+      <li>Slow down when a message feels urgent or scary.</li>
+      <li>Type web addresses yourself instead of clicking on links.</li>
+      <li>Hang up and call back using a number you already trust.</li>
+      <li>Use long passphrases and turn on two-step verification.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Cyber Safety for Seniors. Educational use only.</p>
+    <a href="#main-content">Back to top</a>
+  </footer>
+
+  <!-- Your existing script.js (slideshow, other interactions) -->
+  <script src="javascript/script.js"></script>
+
+  <!-- Basic JavaScript validation for this form -->
+  <script>
+    (function () {
+      const form = document.getElementById("cyber-quiz-form");
+      const messages = document.getElementById("form-messages");
+      const results = document.getElementById("submitted-results");
+
+      function setError(fieldId, message) {
+        const input = document.getElementById(fieldId);
+        const errorDiv = document.getElementById(fieldId + "-error");
+        if (input) {
+          input.classList.add("error-field");
+        }
+        if (errorDiv) {
+          errorDiv.textContent = message;
+        }
+      }
+
+      function clearError(fieldId) {
+        const input = document.getElementById(fieldId);
+        const errorDiv = document.getElementById(fieldId + "-error");
+        if (input) {
+          input.classList.remove("error-field");
+        }
+        if (errorDiv) {
+          errorDiv.textContent = "";
+        }
+      }
+
+      function clearAllErrors() {
+        const errorDivs = form.querySelectorAll(".error-message");
+        errorDivs.forEach(div => div.textContent = "");
+        const inputs = form.querySelectorAll(".error-field");
+        inputs.forEach(el => el.classList.remove("error-field"));
+        messages.textContent = "";
+        messages.className = "";
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // We'll handle everything with JS
+        clearAllErrors();
+
+        let isValid = true;
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const experience = document.getElementById("experience").value;
+        const freq = document.getElementById("frequency").value;
+        const helpText = document.getElementById("help-text").value.trim();
+        const confirmSafe = document.getElementById("confirm-safe").checked;
+
+        // 1. Name
+        if (name === "") {
+          setError("name", "Please enter your name.");
+          isValid = false;
+        } else {
+          clearError("name");
+        }
+
+        // 2. Email (simple check)
+        if (email === "") {
+          setError("email", "Please enter your email address.");
+          isValid = false;
+        } else if (!email.includes("@") || !email.includes(".")) {
+          setError("email", "Please enter a valid email address (example: name@example.com).");
+          isValid = false;
+        } else {
+          clearError("email");
+        }
+
+        // 3. Experience
+        if (experience === "") {
+          setError("experience", "Please tell us how comfortable you are using the internet.");
+          isValid = false;
+        } else {
+          clearError("experience");
+        }
+
+        // 4. Package text question (radio)
+        const packageChoice = form.querySelector("input[name='package-text']:checked");
+        if (!packageChoice) {
+          document.getElementById("package-text-error").textContent =
+            "Please choose what you would do with the suspicious text.";
+          isValid = false;
+        } else {
+          document.getElementById("package-text-error").textContent = "";
+        }
+
+        // 5. Password safety question (radio)
+        const passwordChoice = form.querySelector("input[name='password-safety']:checked");
+        if (!passwordChoice) {
+          document.getElementById("password-safety-error").textContent =
+            "Please choose the safest password option.";
+          isValid = false;
+        } else {
+          document.getElementById("password-safety-error").textContent = "";
+        }
+
+        // 6. Frequency
+        if (freq === "") {
+          setError("frequency", "Please select how often you see suspicious messages.");
+          isValid = false;
+        } else {
+          clearError("frequency");
+        }
+
+        // 7. Worries (at least one checkbox)
+        const worriesChecked = form.querySelectorAll("input[name='worries']:checked");
+        if (worriesChecked.length === 0) {
+          document.getElementById("worries-error").textContent =
+            "Please choose at least one thing that worries you online.";
+          isValid = false;
+        } else {
+          document.getElementById("worries-error").textContent = "";
+        }
+
+        // 8. Help text
+        if (helpText === "") {
+          setError("help-text", "Please describe a suspicious message or concern.");
+          isValid = false;
+        } else {
+          clearError("help-text");
+        }
+
+        // 9. Confirmation checkbox
+        if (!confirmSafe) {
+          document.getElementById("confirm-safe-error").textContent =
+            "Please check this box to confirm you understand this safety rule.";
+          isValid = false;
+        } else {
+          document.getElementById("confirm-safe-error").textContent = "";
+        }
+
+        if (!isValid) {
+          messages.textContent = "Please fix the items highlighted in red.";
+          messages.classList.add("error");
+          // Move focus to first error field
+          const firstError = form.querySelector(".error-field") ||
+                             form.querySelector(".error-message:not(:empty)");
+          if (firstError && firstError.focus) {
+            firstError.focus();
+          }
+          return;
+        }
+
+        // If valid, show results summary instead of leaving the page
+        messages.textContent = "Thank you! Your answers are shown below. Remember: never click suspicious links.";
+        messages.classList.add("success");
+
+        // Build a simple summary
+        const worriesList = Array.from(worriesChecked).map(cb => cb.value).join(", ") || "None";
+
+        results.innerHTML = `
+          <h3>Your Answers</h3>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Comfort level online:</strong> ${experience}</p>
+          <p><strong>How often you see suspicious messages:</strong> ${freq}</p>
+          <p><strong>What you would do with the suspicious package text:</strong> ${packageChoice ? packageChoice.parentElement.textContent.trim() : ""}</p>
+          <p><strong>Safest password you chose:</strong> ${passwordChoice ? passwordChoice.parentElement.textContent.trim() : ""}</p>
+          <p><strong>What worries you most online:</strong> ${worriesList}</p>
+          <p><strong>Suspicious message or concern you described:</strong></p>
+          <p>${helpText.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+        `;
+        results.classList.remove("hidden");
+        results.focus?.();
+      });
+    })();
+  </script>
+</body>
+</html>

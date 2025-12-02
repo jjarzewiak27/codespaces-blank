@@ -1,0 +1,177 @@
+/* main.css */
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fc;
+  color: #222;
+}
+
+/* Use high contrast for accessibility */
+a {
+  color: #004a99;
+}
+a:focus,
+button:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+/* Layout grid for desktop */
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 1rem;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+.tagline {
+  margin: 0;
+  font-style: italic;
+}
+
+nav {
+  background-color: #e0e7ff;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Grid container */
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+  grid-template-columns: 3fr 1fr;
+}
+
+header { grid-area: header; }
+nav    { grid-area: nav; }
+main   { grid-area: main; }
+aside  { grid-area: aside; }
+footer { grid-area: footer; }
+
+aside {
+  background-color: #eef3ff;
+}
+
+.aside img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Hero section and slideshow */
+.hero {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 250px;
+}
+
+.slideshow {
+  flex: 1 1 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.slideshow-controls {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Fake email example */
+.fake-email {
+  background-color: #fff;
+  border-left: 4px solid #cc0000;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Utility class for hidden elements (for JS interactivity) */
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+}
